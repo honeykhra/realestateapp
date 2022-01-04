@@ -32,27 +32,29 @@ const PropertyDetails = ({
           <Box paddingRight="3" color="green.400">
             {isVerified && <GoVerified />}
           </Box>
-          <Text fontWeight="bold" fontSize="lg">
+          <Text fontWeight="bold" fontSize="xl">
             AED {millify(price)}
             {/* {price} */}
             {rentFrequency && `/${rentFrequency}`}
           </Text>
         </Flex>
         <Box>
-          <Avatar size="sm" src={agency?.logo?.url} />
+          <Avatar size="xl" src={agency?.logo?.url} />
         </Box>
       </Flex>
       <Flex
         alignItems="center"
         p="1"
         justifyContent="space-between"
-        w="250px"
+        w="300px"
         color="blue.400"
+        fontSize="xl"
       >
         {rooms}
         <FaBed />|{baths} <FaBath />|{millify(area)} sqft
         <BsGridFill />
       </Flex>
+
       <Box marginTop="2">
         <Text fontSize="lg" marginBottom="2" fontWeight="bold">
           {title}
@@ -117,8 +119,8 @@ const PropertyDetails = ({
                     fontSize="l"
                     p="2"
                     bg="gray.200"
-                        m="1"
-                        borderRadius="8"
+                    m="1"
+                    borderRadius="8"
                   >
                     {amenity.text}
                   </Text>
